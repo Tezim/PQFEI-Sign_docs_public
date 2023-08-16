@@ -15,6 +15,11 @@
     2.1 [Email-Password Login](#email-password-login)
 
     2.2 [Google Sign-In](#google-sign-in)
+3. [Application](#application)
+    
+    3.1 [User profile](#user-profile)
+
+    3.2 [Homepage](#homepage)
 
 
 ## Theme
@@ -120,6 +125,73 @@ main page.
    <img src="img/reset-email.png" alt="email-reset">
 </div>
 
+### Log in / Log out splash screen
+
+---
+
 ## Application
+
+### User Profile
+Profile settings management, key management excluded. The app provides simple and straightforward card design for better
+UX. Danger zone provides "dangerous" user actions such as deleting and resetting account -> this part is red highlighted.
+
+Main card shows lock icon (possible change to user profile picture), user handle-unique user ID, email of current
+user and visible Sign Out button. Main card has scrollview to be more comfortable for user on different devices.
+
+<div align="center">
+    <img src="img/UI/profile_page.jpg" height="400">
+</div>
+
+
+**Account** 
+- Share User Handle 
+   
+   - Creates QR code of user ID and shows it to user via Bottom sheet dialog
+   - Navigation - swipe down or touch screen to close dialog
+
+<div align="center">
+    <img src="img/UI/user_handle.jpg" height="200">
+</div>
+
+- Reset Password
+
+   - Send reset email to currently signed user (not possible for google sign in accounts)
+   - Shows to user message based on the outcome - "email sent", "failed to send email"
+
+**Support**
+- Documentation
+
+   - Redirects user to specified website - this public documentation
+- Contacts
+
+   - Redirects user to contacts page - currently contacts file in this repository
+  
+**Danger zone**
+
+<div align="center">
+    <img src="img/UI/danger-zone.jpg" height="200">
+</div>
+
+- Reset Account (Beta) currently disabled
+
+   - Resets account - deletes all documents and keys of currently signed in user
+   - Warning dialog is displayed to ask user for confirmation of this action
+
+- Delete Account
+   
+   - Deletes all user information from database and account
+   - Warning dialog is displayed to ask user for confirmation of this action
+
+<div align="center">
+    <img src="img/UI/confirm-dialog.jpg" height="400">
+</div>
+
+### Homepage 
+
+After sign in homepage appears for user to choose what action to continue with.
+
+### Key management
+ 
+### Documents Management
 
 **To be continued...**
